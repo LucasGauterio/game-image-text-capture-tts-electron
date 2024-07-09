@@ -20,7 +20,7 @@ This Electron application runs in the background, captures a selected area of th
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/game-image-text-capture-tts-electron.git
+git clone https://github.com/LucasGauterio/game-image-text-capture-tts-electron
 cd game-image-text-capture-tts-electron
 ```
 
