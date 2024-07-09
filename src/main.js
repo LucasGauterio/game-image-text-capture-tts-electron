@@ -64,7 +64,7 @@ app.whenReady().then(() => {
     createCaptureWindow();
   });
 
-  globalShortcut.register('ControlRight+End', () => {
+  globalShortcut.register('Shift+End', () => {
     console.log('Right Ctrl+End pressed, closing application');
     app.quit();
   });

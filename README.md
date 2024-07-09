@@ -45,7 +45,7 @@ npm start
 - Press `Shift + PrintScreen` to initiate the screen capture process.
 - Select the area of the screen to capture.
 - The application will extract text from the selected area and read it aloud using TTS.
-- Press `Right Ctrl + End` to exit the application.
+- Press `Shift + End` to exit the application.
 
 ## Project Structure
 
