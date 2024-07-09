@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.01);
+}
+
+#selection {
+  position: absolute;
+  border: 2px dashed #00f;
+  background-color: rgba(0, 0, 255, 0.3);
+}
+
+#instruction {
+  position: absolute;
+  color: white;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 5px;
+  border-radius: 3px;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capture Screen</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="selection"></div>
+  <div id="instruction">Select the area to capture the text</div>
+  <script>
+    const { ipcRenderer } = require('electron');
+    let selection = document.getElementById('selection');
+    let instruction = document.getElementById('instruction');
+
+    document.addEventListener('mousedown', (e) => {
+      selection.style.left = e.clientX + 'px';
+      selection.style.top = e.clientY + 'px';
+      ipcRenderer.send('start-selection', { x: e.clientX, y: e.clientY });
+    });
+
+    document.addEventListener('mousemove', (e) => {
+      selection.style.width = (e.clientX - parseInt(selection.style.left)) + 'px';
+      selection.style.height = (e.clientY - parseInt(selection.style.top)) + 'px';
+      ipcRenderer.send('update-selection', { x: e.clientX, y: e.clientY });
+
+      instruction.style.left = (e.clientX + 10) + 'px';
+      instruction.style.top = (e.clientY + 10) + 'px';
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      ipcRenderer.send('end-selection', { x: e.clientX, y: e.clientY });
+      selection.style.width = '0px';
+      selection.style.height = '0px';
+      instruction.style.display = 'none';
+    });
+  </script>
+</body>
+</html>

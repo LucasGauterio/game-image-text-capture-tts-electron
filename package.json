@@ -1,0 +1,21 @@
+{
+  "name": "game-image-text-capture-tts-electron",
+  "version": "1.0.0",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "rebuild-robojs": "electron-rebuild -f -w robojs"
+  },
+  "dependencies": {
+    "@google-cloud/vision": "^4.3.0",
+    "electron": "^31.1.0",
+    "electron-screenshot-service": "^3.2.3",
+    "electron-screenshots": "^0.5.26",
+    "node-fetch": "^3.3.2",
+    "robotjs": "^0.6.0",
+    "say": "^0.16.0",
+    "screenshot-desktop": "^1.15.0",
+    "sharp": "^0.33.4",
+    "talkify-tts": "^4.0.0"
+  }
+}
